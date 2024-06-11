@@ -170,6 +170,7 @@ services:
       - securitymanager
       - systemcredentialmanager
       - crudapp
+      - systementry
 
     networks:
       - sampleapp_0627_net
@@ -249,6 +250,27 @@ services:
     build: ../../../application/services/custom_services/crudapp
     image: crudapp-0627
     container_name: crudapp-0627
+    ports: 
+      - 8117:8117
+    env_file: .env
+    depends_on:
+      - mongo
+    networks:
+      - sampleapp_0627_net
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: 0.0.0.0:24224
+        fluentd-async-connect: "true"
+        tag: fluent
+    mem_limit: 300m
+    mem_reservation: 150m
+    cpus: 0.2
+
+  systementry: 
+    build: ../../../application/services/custom_services/systementry
+    image: systementry-0627
+    container_name: systementry-0627
     ports: 
       - 8115:8115
     env_file: .env

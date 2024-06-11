@@ -54,6 +54,12 @@ service:
   crudapp: 
     name: crudapp
     type: NodePort
+    port: 8117
+    targetPort: 8117
+
+  systementry: 
+    name: systementry
+    type: NodePort
     port: 8115
     targetPort: 8115
 
@@ -85,6 +91,10 @@ deployment:
   crudapp: 
     name: crudapp
     image: geppettotest/sampleapp-crudapp:1.0
+
+  systementry: 
+    name: systementry
+    image: geppettotest/sampleapp-systementry:1.0
 
   camundapod:
      name: camundapod

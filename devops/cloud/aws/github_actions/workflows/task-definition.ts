@@ -70,7 +70,8 @@ module.exports = {
             ],
             "environmentFiles": null,
             "environment": [{"name":"MONGO_DB_URL","value":"mongodb://admin:password@127.0.0.1:27017/sampleapp_0627?authSource=admin"},{"name":"MONGO_DOMAIN","value":"127.0.0.1"},{"name":"SECURITYURL","value":"http://127.0.0.1:8003"},{"name":"AUTHPROXYURL","value":"http://127.0.0.1:8001"},{"name":"ADMINURL","value":"http://127.0.0.1:8004"},{"name":"GCAMURL","value":"http://127.0.0.1:8007"},{"name":"APIGATEWAY","value":"http://127.0.0.1:8000"},{"name":"SYSTEMCREDENTIALMANAGERURL","value":"http://127.0.0.1:8005"}
-            ,{"name":"CRUDAPPURL","value":"http://sampleapp.local:8115"}
+            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8115"}
+            ,{"name":"CRUDAPPURL","value":"http://sampleapp0.local:8117"}
             ],
             "secrets": null,
             "mountPoints": [
@@ -292,6 +293,7 @@ module.exports = {
             ],
             "environmentFiles": null,
             "environment": [{"name":"MONGO_DB_URL","value":"mongodb://admin:password@127.0.0.1:27017/sampleapp_0627?authSource=admin"},{"name":"MONGO_DOMAIN","value":"127.0.0.1"},{"name":"SECURITYURL","value":"http://127.0.0.1:8003"},{"name":"AUTHPROXYURL","value":"http://127.0.0.1:8001"},{"name":"ADMINURL","value":"http://127.0.0.1:8004"},{"name":"GCAMURL","value":"http://127.0.0.1:8007"},{"name":"APIGATEWAY","value":"http://127.0.0.1:8000"}
+            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8115"}
             ],
             "mountPoints": [
                 {
@@ -365,8 +367,8 @@ module.exports = {
             }
         },
         {
-            "name": "crudapp-0627",
-            "image": `${process.env.AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/geppetto-generatedcode-sampleapp-0627-crudapp:latest`,
+            "name": "systementry-0627",
+            "image": `${process.env.AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/geppetto-generatedcode-sampleapp-0627-systementry:latest`,
             "memoryReservation": "300",
             "resourceRequirements": null,
             "essential": true,

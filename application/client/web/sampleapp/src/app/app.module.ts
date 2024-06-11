@@ -36,9 +36,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
             AppComponent
 ],
   imports: [
-VaultadminModule,
 UserModule,
-ManageusersModule,
 AuthorizationModule,
 HomeModule,
 SignupModule,
