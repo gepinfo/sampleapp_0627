@@ -33,14 +33,16 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
 
 @NgModule({
   declarations: [
-            AppComponent
+                AppComponent
 ],
   imports: [
-UserModule,
-AuthorizationModule,
+VaultadminModule,
+ManagecontrolModule,
+ManagerolesModule,
 HomeModule,
 SignupModule,
 LoginModule,
+UserModule,
   SefscreenModule,
 FormsModule,
 HttpClientModule,
@@ -57,10 +59,12 @@ TranslatorModule,
 AppRoutingModule,
 BrowserAnimationsModule,
       BrowserModule,
-  AdminModule
+    AdminModule
 ],
   providers: [
-      	SharedService,
+        	SharedService,
+,
+              { provide: NZ_ICONS useValue: icons },,,
                 { provide: NZ_I18N useValue: en_US }
 
               ,{ provide: NZ_ICONS, useValue: icons },

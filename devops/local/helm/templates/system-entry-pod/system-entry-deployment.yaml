@@ -41,8 +41,8 @@ spec:
               value: "http://{{ .Values.app.prefix }}-system-entry.{{ .Values.app.namespace }}.svc.cluster.local:8000"  
             - name: MONGO_DB_URL
               value: "mongodb://{{ .Values.app.prefix }}-app-db.{{ .Values.app.namespace }}.svc.cluster.local:27017/{{ .Values.app.prefix }}"
-            - name: CRUDAPPURL
-              value: "http://{{ .Values.app.prefix }}-app.{{ .Values.app.namespace }}.svc.cluster.local:8117"
-
             - name: SYSTEMENTRYURL
-              value: "http://{{ .Values.app.prefix }}-app.{{ .Values.app.namespace }}.svc.cluster.local:8115"
+              value: "http://{{ .Values.app.prefix }}-app.{{ .Values.app.namespace }}.svc.cluster.local:8118"
+
+            - name: CRUDAPPURL
+              value: "http://{{ .Values.app.prefix }}-app.{{ .Values.app.namespace }}.svc.cluster.local:8119"

@@ -51,17 +51,17 @@ service:
     type: NodePort
     port: 8080
     targetPort: 8080
-  crudapp: 
-    name: crudapp
-    type: NodePort
-    port: 8117
-    targetPort: 8117
-
   systementry: 
     name: systementry
     type: NodePort
-    port: 8115
-    targetPort: 8115
+    port: 8118
+    targetPort: 8118
+
+  crudapp: 
+    name: crudapp
+    type: NodePort
+    port: 8119
+    targetPort: 8119
 
 
 deployment:
@@ -88,13 +88,13 @@ deployment:
   desktop:
      name: desktop
      image: geppettotest/sampleapp-desktop:1.0
-  crudapp: 
-    name: crudapp
-    image: geppettotest/sampleapp-crudapp:1.0
-
   systementry: 
     name: systementry
     image: geppettotest/sampleapp-systementry:1.0
+
+  crudapp: 
+    name: crudapp
+    image: geppettotest/sampleapp-crudapp:1.0
 
   camundapod:
      name: camundapod

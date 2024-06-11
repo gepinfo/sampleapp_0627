@@ -169,8 +169,8 @@ services:
       - authproxy
       - securitymanager
       - systemcredentialmanager
-      - crudapp
       - systementry
+      - crudapp
 
     networks:
       - sampleapp_0627_net
@@ -246,12 +246,12 @@ services:
       - sampleapp_0627_net
 
 
-  crudapp: 
-    build: ../../../application/services/custom_services/crudapp
-    image: crudapp-0627
-    container_name: crudapp-0627
+  systementry: 
+    build: ../../../application/services/custom_services/systementry
+    image: systementry-0627
+    container_name: systementry-0627
     ports: 
-      - 8117:8117
+      - 8118:8118
     env_file: .env
     depends_on:
       - mongo
@@ -267,12 +267,12 @@ services:
     mem_reservation: 150m
     cpus: 0.2
 
-  systementry: 
-    build: ../../../application/services/custom_services/systementry
-    image: systementry-0627
-    container_name: systementry-0627
+  crudapp: 
+    build: ../../../application/services/custom_services/crudapp
+    image: crudapp-0627
+    container_name: crudapp-0627
     ports: 
-      - 8115:8115
+      - 8119:8119
     env_file: .env
     depends_on:
       - mongo
